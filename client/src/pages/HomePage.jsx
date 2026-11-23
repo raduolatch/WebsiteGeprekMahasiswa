@@ -4,9 +4,23 @@ export default function HomePage() {
   const bestSellers = [
     {
       id: 1,
-      name: 'Ayam Geprek Cabe Merah',
-      desc: 'Ayam krispi dengan sambal merah pedas yang menggugah selera.',
+      name: 'Ayam Geprek Cabe Merah + Nasi',
+      desc: 'Ayam krispi sambal merah pedas dengan nasi yang menggugah selera.',
       price: 'Rp 11.000',
+      tag: 'Terlaris',
+    },
+    {
+      id: 2,
+      name: 'Ayam Saus Lava + Nasi',
+      desc: 'Ayam krispi saus lava dan nasi yang memanjakan lidah.',
+      price: 'Rp 11.000',
+      tag: 'Terlaris',
+    },
+    {
+      id: 3,
+      name: 'Ayam Geprek Cabe Merah + Nasi Daun Jeruk',
+      desc: 'Ayam krispi sambal merah pedas dengan nasi aromatik.',
+      price: 'Rp 14.000',
       tag: 'Terlaris',
     },
   ];

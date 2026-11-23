@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="info-list">
               <div className="info-item">
                 <span>🕒</span>
-                <span>Senin - Sabtu: 08.30 – 20.45 WIB <br/>
+                <span>Senin - Sabtu: 08.30 – 17.00 WIB <br/>
                   Minggu: Tutup
                 </span>
               </div>
