@@ -1,11 +1,14 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useCart } from '../../context/useCart';
 
-export default function MainLayout({ cartCount }) {
+export default function MainLayout() {
+  const { itemCount } = useCart();
+
   return (
     <div className="layout-wrapper">
-      <Navbar cartCount={cartCount} />
+      <Navbar cartCount={itemCount} />
       <main className="main-content">
         <Outlet />
       </main>
