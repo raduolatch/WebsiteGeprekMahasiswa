@@ -1,16 +1,16 @@
-# React + Vite
+# Geprek Mahasiswa — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Menjalankan aplikasi
 
-Currently, two official plugins are available:
+```sh
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Integrasi API
 
-## React Compiler
+Secara default frontend mengakses backend di `http://localhost:3000/api`. Atur `VITE_API_URL` pada environment Vite jika alamat backend berbeda, misalnya `VITE_API_URL=https://example.com/api`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `GET /menu` mengembalikan array produk atau objek `{ "data": [...] }`. Produk menggunakan `id`, `name`, `price`, dan dapat menyertakan `description`, `category`, `image`, serta `tag`.
+- `POST /orders` menerima `customerName`, `phone`, `fulfillment`, `address`, `paymentMethod`, `notes`, `items` (array `productId` dan `quantity`), `subtotal`, dan `total`.
+- Jika menu gagal dimuat, frontend menampilkan menu demo dari `src/data/menu.js` dan memberi peringatan. Pesanan tetap dikirim ke backend; kegagalan API ditampilkan dan isi keranjang tidak dihapus.
